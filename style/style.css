@@ -315,8 +315,14 @@ button {
   border-radius: 10px;
 }
 
+.active_chat:hover {
+  color: #fff;
+  background: #419fd9;
+}
+
 .chatInfo {
   float: left;
+  font-display: unset;
 }
 
 .chatInfo p {
@@ -328,7 +334,7 @@ button {
   width: 55px;
   height: 55px;
   background: #fff
-    url(https://pbs.twimg.com/profile_images/378800000822867536/3f5a00acf72df93528b6bb7cd0a4fd0c.jpeg)
+    url("../img/person.png")
     no-repeat center;
   background-size: cover;
   border-radius: 100%;
@@ -397,7 +403,7 @@ div[class~="onTop"] > .count {
   float: right;
   width: calc(65% - 20px);
   height: 100vh;
-  background: url("./img/bg.jpeg");
+  background: url("../img/bg.jpeg");
   background-size: cover;
   background-position: center center;
   background-color: inherit;
