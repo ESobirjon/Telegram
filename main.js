@@ -31,7 +31,6 @@ $(document).ready(function () {
         }
     });
 
-  
     $(".otherOptions").click(function () {
         $(".moreMenu").slideToggle("fast");
     });
@@ -41,11 +40,14 @@ $(document).ready(function () {
         $(".searchChats").focus();
     });
     
-    var btn = $("#btn");
-    $("#btn").click(function() {
-        $(".sidebar").toggleClass("active");
+    $("body").click(function(e) {
+        if(e.target.id == "btn" || $(e.target).parents(".btn").length) {
+            $(".sidebar").addClass("active");
+        } else {
+            $(".sidebar").removeClass("active");
+        }
     });
-
+   
     //Channel notification icon
     $("#bell").click(function() {
         $(this).toggleClass("bx-bell-off");
@@ -114,7 +116,5 @@ $(document).ready(function () {
                 e.target.value = "";
             }
         }
-
     });
-  
 });
