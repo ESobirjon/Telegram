@@ -322,7 +322,6 @@ button {
 
 .chatInfo {
   float: left;
-  font-display: unset;
 }
 
 .chatInfo p {
@@ -334,7 +333,29 @@ button {
   width: 55px;
   height: 55px;
   background: #fff
-    url("../img/person.png")
+    url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBNFUwQmH640OafdOvh-eIPRcB9ZeIBbYfew&usqp=CAU)
+    no-repeat center;
+  background-size: cover;
+  border-radius: 100%;
+  margin: 13px 13px;
+}
+.chatInfo .image_1 {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background: #fff
+    url("../img/channel.jpg")
+    no-repeat center;
+  background-size: cover;
+  border-radius: 100%;
+  margin: 13px 13px;
+}
+.chatInfo .image_2 {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background: #fff
+    url("../img/bot.jpg")
     no-repeat center;
   background-size: cover;
   border-radius: 100%;
@@ -429,7 +450,29 @@ div[class~="onTop"] > .count {
   width: 55px;
   height: 55px;
   background: #fff
-    url(https://pbs.twimg.com/profile_images/378800000822867536/3f5a00acf72df93528b6bb7cd0a4fd0c.jpeg)
+    url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBNFUwQmH640OafdOvh-eIPRcB9ZeIBbYfew&usqp=CAU)
+    no-repeat center;
+  background-size: cover;
+  border-radius: 100%;
+  margin: 3px 13px;
+}
+.leftSide .image_1 {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background: #fff
+    url("../img/channel.jpg")
+    no-repeat center;
+  background-size: cover;
+  border-radius: 100%;
+  margin: 3px 13px;
+}
+.leftSide .image_2 {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background: #fff
+    url("../img/bot.jpg")
     no-repeat center;
   background-size: cover;
   border-radius: 100%;
@@ -493,7 +536,7 @@ div[class~="onTop"] > .count {
   position: relative;
   width: auto;
   min-width: 100px;
-  max-width: 45%;
+  max-width: 80%;
   height: auto;
   padding: 15px;
   padding-bottom: 25px;
@@ -501,6 +544,56 @@ div[class~="onTop"] > .count {
   margin-bottom: 0px;
   background: rgb(133, 103, 103);
   clear: both;
+}
+
+.msg_channel {
+  width: 420px;
+  position: relative;
+  height: auto;
+  padding-bottom: 25px;
+  margin-top: 10px;
+  margin-left: 20%;
+  margin-bottom: 0px;
+  border-radius: 10px 10px 10px 0;
+  clear: both;
+}
+
+.channel_scroll {
+  position: relative;
+  margin-left: 10%;
+  width: 60%;
+  height: calc(100vh);
+  overflow-x: hidden;
+}
+
+.image_channel {
+  width: 420px; 
+  height: 236px;
+  border-radius: 10px 10px 0 0;
+}
+
+.title_channel {
+  padding: 8px 8px;
+  font-size: 16px;
+  text-decoration: none;
+}
+.channel_icon {
+  height: 18px;
+    margin: 0 .125rem;
+    display: inline-block;
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+}
+
+.channel_timestamp {
+  display: block;
+  position: absolute;
+  right: 20px;
+  bottom: 6px;
+  color: #aaa;
+  font-size: 12px;
+  user-select: none;
 }
 
 .msg_1 {
@@ -655,100 +748,6 @@ div[class~="onTop"] > .count {
 
 .moreMenu .option:nth-last-child(1) {
 	margin-top: 3px;
-}
-
-
-/* SOLVING RESPONSIVE DESIGN ISSUES */
-
-@media screen and (max-width: 1090px) {
-  .leftPanel {
-    width: 40%;
-  }
-
-  .rightPanel {
-    width: calc(60% - 1px);
-  }
-
-  .config {
-    width: 70%;
-  }
-}
-
-@media screen and (max-width: 840px) {
-  .leftPanel {
-    width: 40%;
-  }
-
-  .rightPanel {
-    width: calc(60% - 1px);
-  }
-
-  .config {
-    width: 90%;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  body {
-    font-size: 14px;
-  }
-
-  .leftPanel {
-    width: 45%;
-  }
-
-  .rightPanel {
-    width: calc(55% - 1px);
-  }
-
-  .msg {
-    width: 90%;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .leftPanel {
-    width: 45%;
-  }
-
-  .rightPanel {
-    width: calc(55% - 1px);
-  }
-
-  .msg {
-    width: auto;
-    max-width: 60%;
-  }
-
-  .profile .changePic,
-  .profile .edit {
-    font-size: 14px;
-    font-weight: 500;
-  }
-
-  .profile .edit {
-    margin-left: 5px;
-  }
-}
-
-@media screen and (max-width: 540px) {
-  .switchMobile {
-    display: block;
-  }
-
-  .leftPanel,
-  .rightPanel,
-  .menuWrap,
-  .config,
-  .overlay {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 300px) {
-  .switchMobile {
-    width: calc(220px - 20px);
-  }
 }
 
 .rplaySent {
