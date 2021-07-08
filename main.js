@@ -35,9 +35,18 @@ $(document).ready(function () {
         $(".moreMenu").slideToggle("fast");
     });
 
-   
+   //Search panel
     $(".search").click(function () {
         $(".searchChats").focus();
+    });
+    $("#mySearch").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $(".chats .chatButton").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+        });
+        $(".convHistory .msg").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+        });
     });
     
     $("body").click(function(e) {
