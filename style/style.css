@@ -510,7 +510,6 @@ div[class~="onTop"] > .count {
   height: 50px;
   margin-top: 5px;
   background: #fff;
-  color: #888;
   border-radius: 100%;
   border: none;
 }
@@ -667,16 +666,18 @@ div[class~="onTop"] > .count {
   padding-top: 10px;
   font-size: 25px;
   border-radius: 50%;
+  color: #444;
 }
 
 .replyBar .attach .face:hover {
   color: rgb(194, 167, 167);
-  background: rgb(238, 238, 238);
+  background: #ddd;
 }
 
 .replyBar .d45 {
   transform: rotate(45deg);
   font-size: 25px;
+  cursor: pointer;
 }
 
 .replyBar .replyMessage {
@@ -697,10 +698,13 @@ div[class~="onTop"] > .count {
 .emoji {
   width: 70px;
   height: 50px;
-  color: #777;
   background: #fff;
   border: none;
   border-radius: 0 20px 0 0;
+}
+
+.emoji:hover {
+  background-color: #ddd;
 }
 
 .replyBar .otherTools {
@@ -708,7 +712,6 @@ div[class~="onTop"] > .count {
   height: 50px;
   margin-top: -50px;
   margin-right: 20px;
-  color: #888;
   background: #fff;
   border: none;
   border-radius: 100%;

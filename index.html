@@ -21,50 +21,50 @@
       <i class='bx bx-menu' style="color: rgb(0, 0, 0);" id="btn" ></i>
     </div>
     <ul class="nav_list">
-      <li>
-        <a href="#">
+      <li id="all">
+        <a href="#all">
           <i class='bx bx-grid-alt' ></i>
           <span class="links_name">All</span>
         </a>
         <span class="tooltip">All</span>
       </li>
       <li>
-        <a href="#">
-          <i class='bx bx-user' ></i>
-          <span class="links_name">Personal</span>
+        <a href="#personal">
+          <i class='bx bx-user' id="personal"></i>
+          <span class="links_name" id="personal">Personal</span>
         </a>
         <span class="tooltip">Personal</span>
       </li>
       <li>
-        <a href="#">
-          <i class='bx bx-chat' ></i>
-          <span class="links_name">Groups</span>
+        <a href="#groups">
+          <i class='bx bx-chat' id="groups"></i>
+          <span class="links_name" id="groups">Groups</span>
         </a>
         <span class="tooltip">Groups</span>
       </li>
       <li>
-        <a href="#">
-          <i class='bx bx-folder' ></i>
-          <span class="links_name">Channels</span>
+        <a href="#channels">
+          <i class='bx bx-folder' id="channels"></i>
+          <span class="links_name" id="channels">Channels</span>
         </a>
         <span class="tooltip">Channels</span>
       </li>
-      <li>
-        <a href="#">
+      <li id="bots">
+        <a href="#bots">
           <i class='bx bx-bot' ></i>
           <span class="links_name">Bot</span>
         </a>
         <span class="tooltip">Bot</span>
       </li>
-      <li>
-        <a href="#">
+      <li id="saved">
+        <a href="#saved">
           <i class='bx bx-heart' ></i>
           <span class="links_name">Saved</span>
         </a>
         <span class="tooltip">Saved</span>
       </li> 
       <li>
-        <a href="#">
+        <a href="#setting">
           <i class='bx bx-cog' ></i>
           <span class="links_name">Setting</span>
         </a>
@@ -210,7 +210,10 @@
         	</button>
         	<input type="text" id="panel_1" class="replyMessage" placeholder="Type your message..."/>
         	<button class="toolButtons emoji">
-        		<i class="material-icons d45">attach_file</i>
+				<label for="uploadFile">
+					<i class="material-icons d45">attach_file</i>
+				</label>
+				<input type="file" id="uploadFile" style="display: none;">
 			</button>
 			<button class="otherTools toolButtons audio">
 				<i class="material-icons">mic</i>
@@ -273,7 +276,10 @@
         	</button>
         	<input type="text" id="panel_2" class="replyMessage" placeholder="Type your message..."/>
         	<button class="toolButtons emoji">
-        		<i class="material-icons d45">attach_file</i>
+				<label for="uploadFile">
+					<i class="material-icons d45">attach_file</i>
+				</label>
+				<input type="file" id="uploadFile" style="display: none;">
 			</button>
 			<button class="otherTools toolButtons audio">
 				<i class="material-icons">mic</i>
@@ -382,7 +388,10 @@
         	</button>
         	<input type="text" class="replyMessage" placeholder="Type your message..."/>
         	<button class="toolButtons emoji">
-        		<i class="material-icons d45">attach_file</i>
+				<label for="uploadFile">
+					<i class="material-icons d45">attach_file</i>
+				</label>
+				<input type="file" id="uploadFile" style="display: none;">
 			</button>
 			<button class="otherTools toolButtons audio">
 				<i class="material-icons">mic</i>
