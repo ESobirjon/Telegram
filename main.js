@@ -128,30 +128,41 @@ $(document).ready(function () {
     });
 
     //Send file
-    $("#uploadFile").change(function(e) {
-        var file = URL.createObjectURL(e.target.files[0]);
+    $("#uploadFile_1").change(function(e) {
         var dt = new Date();
-        console.log(e);
-        $("#chatPanel_1").append(`
-        <div class="msg messageSent msg_2">
-            <img src=${file} style="min-width: 100px; max-width: 100%; border-radius: 15px;">
-            <i class="material-icons readStatus">done</i>
-            <span class="timestamp">${dt.getHours() + ":" + dt.getMinutes()}</span>
-        </div>
-        `);
-        $("p[id='person_1']").attr("style", "display: none;")
-        $("#one").append(`
-            <p class='message' id="person_1">Photo</p>
-        `);
-        $("p[id='data_1']").attr("style", "display: none;");
-        $("#data1").append(`
-            <p class="date" id="data_1">${dt.getHours() + ":" + dt.getMinutes()}</p>
-        `);
+        var file = URL.createObjectURL(e.target.files[0]);
+        var fileName = this.files[0];
+        var fileType = fileName["type"];
+        var validImageTypes = ["image/gif", "image/jpeg", "image/jpg", "image/png"];
+        if ($.inArray(fileType, validImageTypes) < 0) {
+            alert("These types of files cannot be sent.");
+        } else {
+            $("#chatPanel_1").append(`
+            <div class="msg messageSent msg_2">
+                <img src=${file} style="min-width: 100px; max-width: 100%; border-radius: 15px;">
+                <i class="material-icons readStatus">done</i>
+                <span class="timestamp">${dt.getHours() + ":" + dt.getMinutes()}</span>
+            </div>
+            `);
+            $("p[id='person_1']").attr("style", "display: none;")
+            $("#one").append(`
+                <p class='message' id="person_1">Photo</p>
+            `);
+            $("p[id='data_1']").attr("style", "display: none;");
+            $("#data1").append(`
+                <p class="date" id="data_1">${dt.getHours() + ":" + dt.getMinutes()}</p>
+            `);
+        }
     });
-    $("#uploadFile").change(function(e) {
-        var file = URL.createObjectURL(e.target.files[0]);
+    $("#uploadFile_2").change(function(e) {
         var dt = new Date();
-        console.log(e);
+        var file = URL.createObjectURL(e.target.files[0]);
+        var fileName = this.files[0];
+        var fileType = fileName["type"];
+        var validImageTypes = ["image/gif", "image/jpeg", "image/jpg", "image/png"];
+        if ($.inArray(fileType, validImageTypes) < 0) {
+            alert("These types of files cannot be sent.");
+        } else {
         $("#chatPanel_2").append(`
             <div class="msg messageSent msg_2">
                 <img src=${file} style="min-width: 100px; max-width: 100%; border-radius: 15px;">
@@ -167,5 +178,6 @@ $(document).ready(function () {
         $("#data2").append(`
             <p class="date" id="data_2">${dt.getHours() + ":" + dt.getMinutes()}</p>
         `);
+        }
     });
 });
